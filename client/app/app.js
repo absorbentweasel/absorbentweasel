@@ -1,1 +1,1 @@
-angular.module("howWasIt", ["ui-router"]);
+angular.module("howWasIt", ["howWasIt.map", "ui.router"]);

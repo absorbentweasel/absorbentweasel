@@ -9,6 +9,9 @@
       <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+      <!-- angular modules -->
+      <script src="app/map/map.js"></script>
       <script src="app/app.js"></script>
     </head>
 
@@ -34,9 +37,12 @@
       </div>
       </nav>
       <div class="main">
-        <div class="col-md-8 map">Map</div>
+        <!-- map -->
+        <div class="col-md-8 map" id="map-canvas" ng-controller="mapController"></div>
         <div class="col-md-4 sidebar">
+          <!-- topfive -->
           <div class="col-md-4 top-five">TopFive</div>
+          <!-- friends list -->
           <div class="col-md-4 friends">Friends</div>
         </div>
       </div>
