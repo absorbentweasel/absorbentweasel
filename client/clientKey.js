@@ -1,5 +1,5 @@
 var keys = {
-  public: AIzaSyACIwxG58oDeoKTmOthoMAzWylc94dI69g;
+  public: 'asdfasdfasdfasdfasdf';
 }
 
 module.exports = keys;
