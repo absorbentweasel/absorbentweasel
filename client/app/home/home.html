@@ -25,6 +25,15 @@
                   <button type='submit'>Submit</button>
                 </form>
             </div>
+          </li>
+
+<!--           <li>Location: 
+           <input type="text" name="location" id = "search-box" required>
+         </li>
+
+          <li ng-show="readyToReview">
+               Review
+          </li> -->
         </ul>
 
         <ul class ="nav navbar-nav navbar-right">
@@ -40,25 +49,15 @@
     </nav>
 
   </div>
-  <div id="map-canvas" class="col-md-10"></div>
+<div id="map-canvas" class="col-md-10"></div>
+
 
   <!-- Sidebar to hold friends and top five -->
-<!--   <div class="col-md-4 sidebar"> -->
-
-    <!-- TopFive Module -->
-<!--     <div class="col-md-4 top-five" ng-controller="TopFiveController">TopFive</div> -->
 
     <!-- Friends Module -->
     <div class="col-md-2 friends" ng-controller="FriendsController">
       <!-- <h3>Friends</h3> -->
 
-      <!-- Friends Filter -->
-<!--       <div>
-        <span>Search your friends</span>
-        <form>
-          <input type="text" name="friendsFilter" ng-model="friendsFilterForm">
-        </form>
-      </div> -->
 
       <!-- Member Search -->
       <div>
@@ -70,8 +69,7 @@
           <ul class="search-members-results">
             <!-- <h4>Search Results</h4> -->
             <li ng-repeat="member in searchMembersResults">
-              <div class="member-name">{{ member.first_name }} {{ member.last_name }}</div>
-              <div class="member-email">{{ member.email }}</div>
+              <div class="member-name">{{ member.first_name }}</div>
               <button ng-click="addFriend(member)">Add Friend</button>
             </li>
           </ul>
@@ -82,9 +80,8 @@
       <h3> My Friends</h3>
       <ul class="friends-list">
         <!-- <h4>Friends List</h4> -->
-        <li ng-repeat="friend in userFriends | filter: friendsFilterForm">
-          <div class="friend-name" ng-click="addFriendReviews(friend)">{{ friend.first_name }} {{ friend.last_name }}</div>
-          <div class="friend-email">{{ friend.email }}</div>
+        <li class="friend-point"ng-repeat="friend in userFriends | filter: friendsFilterForm">
+          <div class="friend-name" ng-click="addFriendReviews(friend)">{{ friend.first_name }}</div>
           <button ng-click="removeFriend(friend)">Remove Friend</button>
         </li>
       </ul>

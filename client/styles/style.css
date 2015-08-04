@@ -1,9 +1,31 @@
 #map-canvas {
-  height: 580px;
-  width:900px;
+/*  height: 580px;
+  width:900px;*/
+  width:75%;
+  height:85vh;
 }
 
 input {
   display:block;
 }
 
+.navbar {
+  background-color: #168ccc;
+}
+
+.navbar-default .navbar-brand{
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #ffffff;
+}
+
+button {
+  font-size: 9px;
+  height: 12px;
+}
+
+.friend-li {
+  
+}

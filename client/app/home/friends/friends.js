@@ -55,6 +55,8 @@ angular.module('howWasIt.friends', [])
     })
     .then(function(resp) {
       console.log('FRIEND REMOVED: ', $scope.userFriends[resp.data.friendId]);
+      // clear markers on map
+      $scope.removeReviews();
       delete $scope.userFriends[resp.data.friendId];
 
     });
@@ -67,7 +69,7 @@ angular.module('howWasIt.friends', [])
       map: $rootScope.map,
       position: new google.maps.LatLng(place.latitude, place.longitude),
       title: place.google_loc_name,
-      animation: google.maps.Animation.Drop
+      animation: google.maps.Animation.DROP
     });
 
     location.contentString = "<div><h5>" + place.google_loc_name + "</h5><hr><h5>"+place.review_text+"</h5></div>";
